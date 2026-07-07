@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e.thos | Streetwear & Independent Media</title>
+    <style>
+        /* Raw, Brutalist Streetwear Minimalist Aesthetic */
+        :root {
+            --bg-dark: #0a0a0a;
+            --text-light: #ffffff;
+            --text-muted: #666666;
+            --accent-red: #bc2c2c;
+            --border-raw: #1c1c1c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            letter-spacing: -0.5px;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Minimal Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--border-raw);
+            padding-bottom: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .brand-logo {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-transform: lowercase;
+            letter-spacing: -3px;
+        }
+
+        .brand-logo span {
+            color: var(--text-muted);
+        }
+
+        .status-tag {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.8rem;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Manifesto Split Section */
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            margin-bottom: 6rem;
+            align-items: center;
+        }
+
+        .manifesto-text {
+            font-size: 2.2rem;
+            line-height: 1.25;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .manifesto-text span {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .manifesto-sub {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-left: 2px solid var(--accent-red);
+            padding-left: 1.5rem;
+        }
+
+        /* Video Showcase Section (Documentary Embeds) */
+        .video-section {
+            margin-bottom: 6rem;
+        }
+
+        .section-label {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            display: block;
+        }
+
+        /* Video Grid Layout */
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border: 1px solid var(--border-raw);
+            background: #111;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: grayscale(20%);
+        }
+
+        /* Portals Navigation Grid */
+        .portals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .portal-card {
+            border: 1px solid var(--border-raw);
+            padding: 3rem 2rem;
+            text-decoration: none;
+            color: var(--text-light);
+            background: #0e0e0e;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 220px;
+        }
+
+        .portal-card:hover {
+            border-color: var(--text-light);
+            background: #121212;
+            transform: translateY(-2px);
+        }
+
+        .portal-card.highlight {
+            border-color: var(--accent-red);
+        }
+
+        .portal-card.highlight:hover {
+            border-color: var(--text-light);
+        }
+
+        .portal-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .portal-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .portal-meta {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-raw);
+            padding-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .manifesto-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .manifesto-text { font-size: 1.8rem; }
+            .container { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <div class="brand-logo">e.thos<span>.</span></div>
+            <div class="status-tag">[ Phase One Live ]</div>
+        </header>
+
+        <!-- Manifesto Block -->
+        <section class="manifesto-grid">
+            <div class="manifesto-text">
+                A structural study of form, subculture, and raw video composition. <span>Born out of independent technical documentation, looking to empower co-creation.</span>
+            </div>
+            <div class="manifesto-sub">
+                We reject standard, mass-manufactured graphics. e.thos is an open visual playground built for the self-governed independent class.
+            </div>
+        </section>
+
+        <!-- Video Embed Area (Dual Documentary Layout) -->
+        <section class="video-section">
+            <span class="section-label">// PROJECT MEDIA LOGS: LAB_01 & LAB_02</span>
+            <div class="video-grid">
+                
+                <!-- Video 1 -->
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/NgTm4GVbCBA?controls=1&rel=0" title="e.thos media log 01" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/ZJyouqZyu0E?controls=1&rel=0" title="e.thos media log 02" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Action Portals -->
+        <section class="portals-grid">
+            
+            <a href="https://www.youtube.com/@ethoscrew" target="_blank" class="portal-card">
+                <div class="portal-meta">Channel // 01</div>
+                <h3>Independent Film</h3>
+                <p>Access our raw documentary archives, technical reels, and cinematic edits.</p>
+            </a>
+
+            <a href="https://www.instagram.com/skate.e.thos/" target="_blank" class="portal-card">
+                <div class="portal-meta">Social Log // 02</div>
+                <h3>Asset Gallery</h3>
+                <p>Real-time visual drop notices, print proofs, and background updates.</p>
+            </a>
+
+            <!-- Directly points to your collections endpoint on your Shopify account -->
+            <a href="https://e-thos-2.myshopify.com/collections/all" target="_blank" class="portal-card highlight">
+                <div class="portal-meta" style="color: var(--accent-red);">Co-Creation Hub // 03</div>
+                <h3>Custom Lab</h3>
+                <p>Launch the design studio canvas. Upload your custom artwork to build a piece.</p>
+            </a>
+
+        </section>
+
+        <!-- Lower Metadata -->
+        <footer>
+            <div>INITIATED.2026 // SYSTEM OPERATIONAL</div>
+            <div>&copy; e.thos system.</div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
